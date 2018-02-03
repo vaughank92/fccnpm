@@ -17,7 +17,6 @@ function filterDirectory(returnFunction) {
 		else {
 			//could've used path.extName for a comparison
 			//var filteredList = files.filter((file, index)) => file.extName(extension)
-			// extension would not need the added '.' then
 			var filteredList = files.filter((file, index) => file.includes(extension));
 		}
 
