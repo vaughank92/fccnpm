@@ -3,8 +3,8 @@ let process = require('process');
 
 let args = process.argv.slice(2);
 
-function getData(logFunction) {
-	http.get(args[0], function(response) {
+function getData(url) {
+	http.get(url, function(response) {
 		// console.log(response);
 		response.setEncoding('utf8')
 		response.on('data', function(data) {
@@ -20,4 +20,4 @@ function getData(logFunction) {
 
 }
 
-getData();
+getData(args[0]);
